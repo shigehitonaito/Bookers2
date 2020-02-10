@@ -1,0 +1,22 @@
+<div class="users-page">
+<h1>User info</h1>
+  <div class="user-img"><%= attachment_image_tag user, :profile_image, :fill, 80, 80, fallback: "no_image.jpg" %></div>
+
+  <table>
+    <tbody>
+    <tr>
+  <th class="user-item">name</th>
+  <td><%= user.name %></td>
+  </tr>
+  <tr>
+  <th class="user-item">introduction</th>
+  <td><%= user.introduction %></td>
+  </tr>
+  </tbody>
+  </table>
+  <div class="user-nav">
+    <%= link_to edit_user_path(@user.id) do %>
+    <i class="fas fa-tools"></i>
+    <%end%>
+  </div>
+</div>

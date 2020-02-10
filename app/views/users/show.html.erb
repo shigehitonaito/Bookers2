@@ -1,0 +1,19 @@
+
+
+<div class="container">
+<%= flash[:notice] %>
+<%= flash[:user] %>
+
+
+  <div class="row">
+    <div class="col-xs-3">
+<%= render 'users/list', user: @user %>
+<%= render 'books/list', book:@book %>
+</div>
+
+<div class="col-xs-9">
+  <h1>Books</h1>
+<%= render 'books/text', books:@books %>
+</div>
+</div>
+</div>
